@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Logout{% endblock %}
+{% block content %}
+
+    <p>Не авторизован<br>Благодарим вас за время, проведенное на этом сайте.</p>
+    {% load i18n %}
+    {% get_current_language as LANGUAGE_CODE %}
+    <a href="/{{LANGUAGE_CODE}}/accounts/login/">Регистрация</a>
+
+{% endblock %}

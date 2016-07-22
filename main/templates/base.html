@@ -1,0 +1,29 @@
+<!doctype html>
+{% block html-lang %}<html lang="ru">{% endblock %}
+<meta charset="utf-8">
+<title>{% block title %}test{% endblock %}</title>
+<header>{% block header %}Standart HEADER<hr>{% endblock %}</header>
+<h1>Test header info to all</h1>
+{% block content %}    
+    <h1>Content block is clear</h1>
+{% endblock %}
+<footer>{% block footer %}<hr><p>Standart FOOTER</p>{% endblock %}</footer>
+<style>
+.hyphens {    
+    text-align: justify;    
+    -webkit-hyphens: auto; 
+    -webkit-hyphenate-character:"\2010";
+    -webkit-hyphenate-limit-after:1;
+    -webkit-hyphenate-limit-before:3;
+    -moz-hyphens: auto;    
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word; 
+}
+.block {
+    float: left;
+    margin: 5px;
+    padding: 15px;
+    border: 1px solid black;
+}
+</style>

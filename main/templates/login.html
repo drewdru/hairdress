@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    {% load i18n %}
+    {%trans "Введите логин и пароль, чтобы продолжить"%}
+
+	{% if form.errors %}
+	    <p class="error">{% load i18n %}{%trans "Сожалеем, вы неправильно ввели логин или пароль"%}</p>
+	{% endif %}
+
+    <form action='.' method='post'>
+        {% csrf_token %}
+        <label for="username">{%trans "Логин"%}:</label>
+        <input type="text" name="username" value="" id="username">
+        <label for="password">{%trans "Пароль"%}:</label>
+        <input type="password" name="password" value="" id="password">
+        <input type="submit" value="login" />
+        {% if next %}
+            <input type="hidden" name="next" value="{{ next }}" />
+        {% else %}
+            <input type="hidden" name="next" value="/" />      
+        {% endif %}
+    </form>
+
+{% endblock %}

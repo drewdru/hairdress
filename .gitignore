@@ -1,0 +1,17 @@
+hairdress/settings.py
+logs/
+media/
+tmp/
+
+*.sock
+*.db
+*.mwb
+*.mwb.bak
+*.sqlite3
+*.log
+
+.vscode/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
